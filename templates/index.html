@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  .jumbotron {
+    background-color: #e0d5d5;
+    color: #050505;
+  }
+  </style>
+    <title>Track Analyzer</title>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Track Analyzer</h1>
+  <p>Fleet Information Query System</p>
+<div>
+<form class = "form-inline" action="/result" method="POST">
+	<label for="Query">Select </label>
+	<select type="text" id="Query" name="Query" required="required">
+	<option value="show me cargos">show me cargos</option>
+	<option value="show me trucks">show me trucks</option>
+	<option value="show me fleets">show me fleets</option>
+	</select>
+	<br>
+	<br>
+	 <button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</form>
+</body>
+</html>

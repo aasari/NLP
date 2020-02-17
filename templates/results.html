@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  .jumbotron {
+    background-color: #e0d5d5;
+    color: #050505;
+  }
+  .carousel-control.right, .carousel-control.left {
+   background-color: #e0d5d5;
+   color: #e0d5d5;
+  }
+  .carousel-indicators li {
+  background-color: #e0d5d5;
+    border-color: #e0d5d5;
+  }
+  .carousel-indicators li.active {
+    background-color: #e0d5d5;
+  }
+  </style>
+    <div class="jumbotron text-center">
+    <title>Track Analyzer</title>
+</head>
+
+<!-- Adding some style to table (OPTIONAL) -->
+<style type="text/css">
+
+    th:tr{
+        color: blue;
+
+    }
+    tr:nth-of-type(2n){
+        border: 1px solid black;
+        background-color: rgba(150, 150, 150, 0.5);
+
+    }
+
+    td{
+        padding: 8px 8px;
+        border: 1px solid black;
+    }
+</style>
+<body>
+
+<table style="margin-left: 20px;">
+<!-- Table headers -->
+    <th>
+        <tr style="color: green; ">
+        <td>Serial Number</td>
+        <td>{{column_names}}</td>
+</tr>
+    </th>
+
+<!-- For loop logic of jinja template -->
+{%for i in range(0, row)%}
+
+<!-- table rows -->
+<tr>
+    <td>{{i}}</td>
+    <td>{{rows[i]}}</td>
+
+{%endfor%}
+
+</tr>
+
+</table>
+
+
+</body>
+</html>
